@@ -392,10 +392,15 @@
         <!-- Contenido hágase socio -->
         <div class="row" style="margin-top: 20px">
           <div class="col-lg-8 mx-auto">
-            <form id="socioForm">
+            <form id="socioForm" action="send_email.php" method="POST">
               <div class="form-group">
                 <label for="tipoSocio">Tipo de Socio</label>
-                <select class="form-control" id="tipoSocio" required>
+                <select
+                  class="form-control"
+                  id="tipoSocio"
+                  name="tipoSocio"
+                  required
+                >
                   <option value="">Seleccione...</option>
                   <option value="activo">Activo</option>
                   <option value="cooperador">Cooperador</option>
@@ -403,11 +408,23 @@
               </div>
               <div class="form-group">
                 <label for="fecha">Fecha</label>
-                <input type="date" class="form-control" id="fecha" required />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fecha"
+                  name="fecha"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="nombres">Nombres</label>
-                <input type="text" class="form-control" id="nombres" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombres"
+                  name="nombres"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="apellidos">Apellidos</label>
@@ -415,28 +432,59 @@
                   type="text"
                   class="form-control"
                   id="apellidos"
+                  name="apellidos"
                   required
                 />
               </div>
               <div class="form-group">
                 <label for="rut">RUT</label>
-                <input type="text" class="form-control" id="rut" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rut"
+                  name="rut"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="calle">Calle</label>
-                <input type="text" class="form-control" id="calle" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="calle"
+                  name="calle"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="ciudad">Ciudad</label>
-                <input type="text" class="form-control" id="ciudad" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ciudad"
+                  name="ciudad"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" required />
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefono"
+                  name="telefono"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="mail">Mail</label>
-                <input type="email" class="form-control" id="mail" required />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="mail"
+                  name="mail"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="patrocinante1">Nombre socio patrocinante 1</label>
@@ -444,6 +492,7 @@
                   type="text"
                   class="form-control"
                   id="patrocinante1"
+                  name="patrocinante1"
                   required
                 />
               </div>
@@ -453,6 +502,7 @@
                   type="text"
                   class="form-control"
                   id="patrocinante2"
+                  name="patrocinante2"
                   required
                 />
               </div>

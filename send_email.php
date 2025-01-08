@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Remitente y destinatario
         $mail->setFrom($mail, $nombres);
-        $mail->addAddress('noreply@benevalpo.cl', 'Beneficiencia Alemana de Valparaíso');
+        $mail->addAddress('informatica@ecosa.cl');
 
         // Contenido del correo
         $mail->isHTML(true);
