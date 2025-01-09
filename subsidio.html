@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Solicitud de Subsidio</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section
+      class="page-section bg-primary text-white mb-0"
+      id="solicitud-subsidio"
+    >
+      <div class="container">
+        <!-- Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">
+          Solicitud de Subsidio
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon">
+            <span class="material-symbols-outlined"> payments </span>
+          </div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Form Content-->
+        <div class="row" style="margin-top: 20px">
+          <div class="col-lg-8 mx-auto">
+            <div id="message"></div>
+            <form id="subsidioForm" action="send_subsidio.php" method="POST">
+              <input type="hidden" id="fechaSolicitud" name="fechaSolicitud" />
+              <h3 class="text-center text-uppercase text-white">
+                Individualización del postulante a beneficio
+              </h3>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  maxlength="20"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="nacionalidad">Nacionalidad</label>
+                <select
+                  class="form-control"
+                  id="nacionalidad"
+                  name="nacionalidad"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rut">RUT</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rut"
+                  name="rut"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="domicilio">Domicilio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="domicilio"
+                  name="domicilio"
+                  maxlength="60"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefono"
+                  name="telefono"
+                  required
+                />
+              </div>
+              <h3 class="text-center text-uppercase text-white">
+                Datos de nacimiento
+              </h3>
+              <div class="form-group">
+                <label for="lugarNacimiento">Lugar</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lugarNacimiento"
+                  name="lugarNacimiento"
+                  maxlength="50"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="paisNacimiento">País</label>
+                <select
+                  class="form-control"
+                  id="paisNacimiento"
+                  name="paisNacimiento"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaNacimiento"
+                  name="fechaNacimiento"
+                  placeholder="dd/mm/yyyy"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-light mt-3">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/subsidio-handler.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

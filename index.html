@@ -71,13 +71,16 @@
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#convenios"
-                >Convenios</a
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hagase-socio"
+                >Hágase socio</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hagase-socio"
-                >Hágase socio</a
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="subsidio.html"
+                target="_blank"
+                >Solicitar Subsidio</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
@@ -392,6 +395,7 @@
         <!-- Contenido hágase socio -->
         <div class="row" style="margin-top: 20px">
           <div class="col-lg-8 mx-auto">
+            <div id="message"></div>
             <form id="socioForm" action="send_email.php" method="POST">
               <div class="form-group">
                 <label for="tipoSocio">Tipo de Socio</label>
@@ -506,7 +510,13 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-light mt-3">Enviar</button>
+              <button
+                type="submit"
+                class="btn btn-light mt-3"
+                href="#hagase-socio"
+              >
+                Enviar
+              </button>
             </form>
           </div>
         </div>
@@ -749,7 +759,7 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+              <button type="submit" class="btn btn-light mt-3">Enviar</button>
             </form>
           </div>
         </div>
@@ -809,6 +819,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
+    <script src="js/form-handler.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
