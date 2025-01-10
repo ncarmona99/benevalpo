@@ -114,6 +114,116 @@
                   required
                 />
               </div>
+              <div class="form-group">
+                <label for="archivo"
+                  >Adjuntar cédula de identidad (PDF, PNG o JPG, máx. 5
+                  MB)</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="archivo"
+                  name="archivo"
+                  accept=".pdf,.png,.jpg"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="escolaridad">Nivel de escolaridad</label>
+                <select
+                  class="form-control"
+                  id="escolaridad"
+                  name="escolaridad"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="básica">Básica</option>
+                  <option value="media">Media</option>
+                  <option value="técnica">Técnica</option>
+                  <option value="superior">Superior</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="idiomaAleman">Idioma Alemán</label>
+                <select
+                  class="form-control"
+                  id="idiomaAleman"
+                  name="idiomaAleman"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="no sabe">No sabe</option>
+                  <option value="entiende">Entiende</option>
+                  <option value="domina">Domina</option>
+                  <option value="usa">Usa</option>
+                  <option value="es idioma materno">Es idioma materno</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="comoSupo">¿Cómo supo de nuestra institución?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="comoSupo"
+                  name="comoSupo"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="parteColectividad"
+                  >¿Es o fue parte de la colectividad alemana?</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="parteColectividad"
+                  name="parteColectividad"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="descendenciaAlemana"
+                  >Especifique su descendencia alemana</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="descendenciaAlemana"
+                  name="descendenciaAlemana"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="archivoDescendencia"
+                  >Adjuntar documento de descendencia (PDF, PNG, JPG, máx. 5
+                  MB)</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="archivoDescendencia"
+                  name="archivoDescendencia"
+                  accept=".pdf,.png,.jpg"
+                />
+              </div>
+              <div class="form-group">
+                <label for="seguroSalud">Seguro de salud</label>
+                <select
+                  class="form-control"
+                  id="seguroSalud"
+                  name="seguroSalud"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="Fonasa">Fonasa</option>
+                  <option value="Isapre">Isapre</option>
+                  <option value="Capredena">Capredena</option>
+                  <option value="Otros">Otros</option>
+                </select>
+              </div>
               <h3 class="text-center text-uppercase text-white">
                 Datos de nacimiento
               </h3>
@@ -149,6 +259,209 @@
                   placeholder="dd/mm/yyyy"
                   required
                 />
+              </div>
+              <h3 class="text-center text-uppercase text-white">
+                Datos financieros
+              </h3>
+              <h4>Ingresos regulares por mes:</h4>
+              <div class="form-group">
+                <label for="sueldo">Sueldo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sueldo"
+                  name="sueldo"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="jubilacion">Jubilación</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jubilacion"
+                  name="jubilacion"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="honorarios">Honorarios</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="honorarios"
+                  name="honorarios"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="montepio">Montepío</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="montepio"
+                  name="montepio"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="otraAyuda">Otra ayuda</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otraAyuda"
+                  name="otraAyuda"
+                  required
+                />
+              </div>
+
+              <h4>Ingresos esporádicos:</h4>
+              <div class="form-group">
+                <label for="ingresoEsporadico1">Ingreso esporádico 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ingresoEsporadico1"
+                  name="ingresoEsporadico1"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="ingresoEsporadico2">Ingreso esporádico 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ingresoEsporadico2"
+                  name="ingresoEsporadico2"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="ingresoEsporadico3">Ingreso esporádico 3</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ingresoEsporadico3"
+                  name="ingresoEsporadico3"
+                  required
+                />
+              </div>
+
+              <h4>Gastos mensuales:</h4>
+              <div class="form-group">
+                <label for="arriendo">Arriendo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="arriendo"
+                  name="arriendo"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="servicios">Servicios (luz/agua/gas)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="servicios"
+                  name="servicios"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefonoGastos">Teléfono</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefonoGastos"
+                  name="telefonoGastos"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="alimentacion">Alimentación</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="alimentacion"
+                  name="alimentacion"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="medicamentos">Medicamentos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="medicamentos"
+                  name="medicamentos"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="otrosGastos">Otros</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otrosGastos"
+                  name="otrosGastos"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="totalGastos">Total de gastos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="totalGastos"
+                  name="totalGastos"
+                  readonly
+                />
+              </div>
+
+              <h3 class="text-center text-uppercase text-white">
+                Situación familiar
+              </h3>
+              <div class="form-group">
+                <label for="parientesVivos"
+                  >Parientes vivos con dirección y teléfono</label
+                >
+                <textarea
+                  class="form-control"
+                  id="parientesVivos"
+                  name="parientesVivos"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="hijos"
+                  >Si tiene hijos, indique edad, dirección, teléfono, grado de
+                  escolaridad, título o profesión, en qué trabajan, nombre
+                  empleador, sueldo o ingreso aproximado.</label
+                >
+                <textarea
+                  class="form-control"
+                  id="hijos"
+                  name="hijos"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="esposo"
+                  >Si tiene esposo, esposa, pareja, indique edad, dirección,
+                  teléfono, grado de escolaridad, título o profesión, en qué
+                  trabajan, nombre empleador, sueldo o ingreso
+                  aproximado.</label
+                >
+                <textarea
+                  class="form-control"
+                  id="esposo"
+                  name="esposo"
+                  rows="5"
+                  required
+                ></textarea>
               </div>
               <button type="submit" class="btn btn-light mt-3">Enviar</button>
             </form>

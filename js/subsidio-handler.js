@@ -282,3 +282,244 @@ document.getElementById("telefono").addEventListener("focus", function (event) {
     event.target.value = "+569 ";
   }
 });
+function formatCurrencyInput(event) {
+  let value = event.target.value.replace(/[^0-9]/g, "");
+  event.target.value = "$" + value;
+}
+
+document
+  .getElementById("sueldo")
+  .addEventListener("input", formatCurrencyInput);
+document.getElementById("sueldo").addEventListener("focus", function (event) {
+  if (event.target.value === "") {
+    event.target.value = "$";
+  }
+});
+
+document
+  .getElementById("jubilacion")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("jubilacion")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("honorarios")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("honorarios")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("montepio")
+  .addEventListener("input", formatCurrencyInput);
+document.getElementById("montepio").addEventListener("focus", function (event) {
+  if (event.target.value === "") {
+    event.target.value = "$";
+  }
+});
+
+document
+  .getElementById("otraAyuda")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("otraAyuda")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+function formatCurrencyInput(event) {
+  let value = event.target.value.replace(/[^0-9]/g, "");
+  event.target.value = "$" + value;
+}
+
+function calculateTotalGastos() {
+  const fields = [
+    "arriendo",
+    "servicios",
+    "telefonoGastos",
+    "alimentacion",
+    "medicamentos",
+    "otrosGastos",
+  ];
+  let total = 0;
+  fields.forEach((field) => {
+    const value = document.getElementById(field).value.replace(/[^0-9]/g, "");
+    total += parseInt(value) || 0;
+  });
+  document.getElementById("totalGastos").value = "$" + total;
+}
+
+document
+  .getElementById("sueldo")
+  .addEventListener("input", formatCurrencyInput);
+document.getElementById("sueldo").addEventListener("focus", function (event) {
+  if (event.target.value === "") {
+    event.target.value = "$";
+  }
+});
+
+document
+  .getElementById("jubilacion")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("jubilacion")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("honorarios")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("honorarios")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("montepio")
+  .addEventListener("input", formatCurrencyInput);
+document.getElementById("montepio").addEventListener("focus", function (event) {
+  if (event.target.value === "") {
+    event.target.value = "$";
+  }
+});
+
+document
+  .getElementById("otraAyuda")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("otraAyuda")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("ingresoEsporadico1")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("ingresoEsporadico1")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("ingresoEsporadico2")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("ingresoEsporadico2")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("ingresoEsporadico3")
+  .addEventListener("input", formatCurrencyInput);
+document
+  .getElementById("ingresoEsporadico3")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document.getElementById("arriendo").addEventListener("input", function (event) {
+  formatCurrencyInput(event);
+  calculateTotalGastos();
+});
+document.getElementById("arriendo").addEventListener("focus", function (event) {
+  if (event.target.value === "") {
+    event.target.value = "$";
+  }
+});
+
+document
+  .getElementById("servicios")
+  .addEventListener("input", function (event) {
+    formatCurrencyInput(event);
+    calculateTotalGastos();
+  });
+document
+  .getElementById("servicios")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("telefonoGastos")
+  .addEventListener("input", function (event) {
+    formatCurrencyInput(event);
+    calculateTotalGastos();
+  });
+document
+  .getElementById("telefonoGastos")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("alimentacion")
+  .addEventListener("input", function (event) {
+    formatCurrencyInput(event);
+    calculateTotalGastos();
+  });
+document
+  .getElementById("alimentacion")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("medicamentos")
+  .addEventListener("input", function (event) {
+    formatCurrencyInput(event);
+    calculateTotalGastos();
+  });
+document
+  .getElementById("medicamentos")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
+
+document
+  .getElementById("otrosGastos")
+  .addEventListener("input", function (event) {
+    formatCurrencyInput(event);
+    calculateTotalGastos();
+  });
+document
+  .getElementById("otrosGastos")
+  .addEventListener("focus", function (event) {
+    if (event.target.value === "") {
+      event.target.value = "$";
+    }
+  });
