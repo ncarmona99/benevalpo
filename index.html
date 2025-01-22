@@ -764,7 +764,14 @@
                 class="g-recaptcha"
                 data-sitekey="6Lcw17IqAAAAAEcvBj4sLVpUc8rCTkeRQ4f4QF7Y"
               ></div>
-              <button type="submit" class="btn btn-light mt-3">Enviar</button>
+              <button
+                class="g-recaptcha btn btn-light mt-3"
+                data-sitekey="YOUR_SITE_KEY"
+                data-callback="onSubmit"
+                data-action="submit"
+              >
+                Enviar
+              </button>
             </form>
           </div>
         </div>
@@ -826,5 +833,10 @@
     <!-- Core theme JS-->
     <script src="js/form-handler.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contactForm").submit();
+      }
+    </script>
   </body>
 </html>
