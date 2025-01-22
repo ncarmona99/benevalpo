@@ -4,6 +4,10 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recaptchaSecret = '6Lcw17IqAAAAANxnoOLOCyfn57ABglAsdkfIW1JU';
     $recaptchaResponse = $_POST['g-recaptcha-response'];
@@ -15,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: reCAPTCHA verification failed.";
         exit;
     }
+
     $fechaSolicitud = htmlspecialchars($_POST['fechaSolicitud']);
     $nombre = htmlspecialchars($_POST['nombre']);
     $nacionalidad = htmlspecialchars($_POST['nacionalidad']);
@@ -29,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comoSupo = htmlspecialchars($_POST['comoSupo']);
     $parteColectividad = htmlspecialchars($_POST['parteColectividad']);
     $descendenciaAlemana = htmlspecialchars($_POST['descendenciaAlemana']);
+    $seguroSalud = htmlspecialchars($_POST['seguroSalud']);
     $sueldo = htmlspecialchars($_POST['sueldo']);
     $jubilacion = htmlspecialchars($_POST['jubilacion']);
     $honorarios = htmlspecialchars($_POST['honorarios']);
@@ -54,7 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tipoConstruccion = htmlspecialchars($_POST['tipoConstruccion']);
     $tipoCasa = htmlspecialchars($_POST['tipoCasa']);
     $aguaPotable = htmlspecialchars($_POST['aguaPotable']);
-    
+
+    $mail = new PHPMailer(true);
 
     try {
         // Configuración del servidor de correo
@@ -71,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Encoding = 'base64';
 
         // Remitente y destinatario
-        $mail->setFrom('noreply@benevalpo.cl', 'Solicitud de Subsidio');
+        $mail->setFrom('informatica@ecosa.cl', 'Solicitud de Subsidio');
         $mail->addAddress('nicolascarmonarioseco@gmail.com');
 
         // Contenido del correo
@@ -92,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ¿Cómo supo de nuestra institución?: $comoSupo<br>
             ¿Es o fue parte de la colectividad alemana?: $parteColectividad<br>
             Especifique su descendencia alemana: $descendenciaAlemana<br>
+            Seguro de salud: $seguroSalud<br>
             Sueldo: $sueldo<br>
             Jubilación: $jubilacion<br>
             Honorarios: $honorarios<br>
@@ -118,6 +126,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Tipo de casa: $tipoCasa<br>
             Agua potable: $aguaPotable<br>
         ";
+
+        // Adjuntar archivo
         if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] == UPLOAD_ERR_OK) {
             $fileTmpPath = $_FILES['archivo']['tmp_name'];
             $fileName = $_FILES['archivo']['name'];
@@ -134,6 +144,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit;
             }
         }
+
+        // Adjuntar archivo de descendencia alemana
         if (isset($_FILES['archivoDescendencia']) && $_FILES['archivoDescendencia']['error'] == UPLOAD_ERR_OK) {
             $fileTmpPath = $_FILES['archivoDescendencia']['tmp_name'];
             $fileName = $_FILES['archivoDescendencia']['name'];
@@ -157,4 +169,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al enviar el correo: {$mail->ErrorInfo}";
     }
 }
-?>
