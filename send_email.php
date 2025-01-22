@@ -5,6 +5,16 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $recaptchaSecret = '6Lcw17IqAAAAANxnoOLOCyfn57ABglAsdkfIW1JU';
+    $recaptchaResponse = $_POST['g-recaptcha-response'];
+
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+    $responseKeys = json_decode($response, true);
+
+    if (intval($responseKeys["success"]) !== 1) {
+        echo "Error: reCAPTCHA verification failed.";
+        exit;
+    }
     $tipoSocio = htmlspecialchars($_POST['tipoSocio']);
     $fecha = htmlspecialchars($_POST['fecha']);
     $nombres = htmlspecialchars($_POST['nombres']);
