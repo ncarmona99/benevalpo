@@ -464,10 +464,200 @@
                   required
                 ></textarea>
               </div>
-              <div
-                class="g-recaptcha"
-                data-sitekey="6Lcw17IqAAAAAEcvBj4sLVpUc8rCTkeRQ4f4QF7Y"
-              ></div>
+              <h3 class="text-center text-uppercase text-white">Vivienda</h3>
+              <div class="form-group">
+                <label for="situacionVivienda"
+                  >Situación de vivienda actual</label
+                >
+                <select
+                  class="form-control"
+                  id="situacionVivienda"
+                  name="situacionVivienda"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="propia">Propia</option>
+                  <option value="arrendada">Arrendada</option>
+                  <option value="cedida">Cedida</option>
+                  <option value="casa">Casa</option>
+                  <option value="departamento">Departamento</option>
+                  <option value="casa de reposo">Casa de reposo</option>
+                  <option value="allegado donde familiar">
+                    Allegado donde familiar
+                  </option>
+                  <option value="allegado donde amigos">
+                    Allegado donde amigos
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="situacionPermanente"
+                  >¿Es esta situación permanente o transitoria?</label
+                >
+                <select
+                  class="form-control"
+                  id="situacionPermanente"
+                  name="situacionPermanente"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="permanente">Permanente</option>
+                  <option value="transitoria">Transitoria</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bienesInmuebles">Bienes inmuebles propios</label>
+                <select
+                  class="form-control"
+                  id="bienesInmuebles"
+                  name="bienesInmuebles"
+                  required
+                >
+                  <option value="">Seleccione...</option>
+                  <option value="terreno">Terreno</option>
+                  <option value="parcela">Parcela</option>
+                  <option value="casa">Casa</option>
+                  <option value="departamento">Departamento</option>
+                  <option value="garaje">Garaje</option>
+                  <option value="local comercial">Local comercial</option>
+                  <option value="oficina">Oficina</option>
+                  <option value="otros">Otros</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="otrosBienes"
+                  >Otros bienes (ahorros, accionistas, participaciones,
+                  etc.)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="otrosBienes"
+                  name="otrosBienes"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div id="viviendaPropiaFields" style="display: none">
+                <div class="form-group">
+                  <label for="tipoConstruccion">Tipo de construcción</label>
+                  <select
+                    class="form-control"
+                    id="tipoConstruccion"
+                    name="tipoConstruccion"
+                  >
+                    <option value="">Seleccione...</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="casa">Casa</option>
+                  </select>
+                </div>
+                <div id="tipoCasaFields" style="display: none">
+                  <div class="form-group">
+                    <label for="tipoCasa">Tipo de casa</label>
+                    <select class="form-control" id="tipoCasa" name="tipoCasa">
+                      <option value="">Seleccione...</option>
+                      <option value="solida">Sólida</option>
+                      <option value="mixta">Mixta</option>
+                      <option value="ligera">Ligera</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="aguaPotable">Agua potable</label>
+                  <select
+                    class="form-control"
+                    id="aguaPotable"
+                    name="aguaPotable"
+                  >
+                    <option value="">Seleccione...</option>
+                    <option value="llaves dentro de la casa">
+                      Llaves dentro de la casa
+                    </option>
+                    <option value="llaves en sitio">Llaves en sitio</option>
+                    <option value="no tiene">No tiene</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="serviciosHigienicos">Servicios higiénicos</label>
+                  <select
+                    class="form-control"
+                    id="serviciosHigienicos"
+                    name="serviciosHigienicos"
+                  >
+                    <option value="">Seleccione...</option>
+                    <option value="alcantarillado">Alcantarillado</option>
+                    <option value="fosa septica">Fosa Séptica</option>
+                    <option value="letrina">Letrina</option>
+                    <option value="pozo negro">Pozo negro</option>
+                    <option value="nada">Nada</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="numDorm">Número de dormitorios</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numDorm"
+                    name="numDorm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="numLiv">Cuántos Living</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numLiv"
+                    name="numLiv"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="numBano">Número de baños</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numBano"
+                    name="numBano"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="numCoc">Cuántas cocinas</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numCoc"
+                    name="numCoc"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="construido">Metros Cuadrados construidos</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="construido"
+                    name="construido"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="terreno">Metros Cuadrados Terreno</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="terreno"
+                    name="terreno"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="sepultura"
+                    >En caso de fallecimiento indique si cuenta con sepúltura
+                    propia o familiar y lugar dónde está ubicada.</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="sepultura"
+                    name="sepultura"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
               <button
                 class="g-recaptcha btn btn-light mt-3"
                 data-sitekey="6Lcw17IqAAAAAEcvBj4sLVpUc8rCTkeRQ4f4QF7Y"

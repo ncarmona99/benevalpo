@@ -47,6 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $parientesVivos = htmlspecialchars($_POST['parientesVivos']);
     $hijos = htmlspecialchars($_POST['hijos']);
     $esposo = htmlspecialchars($_POST['esposo']);
+    $situacionVivienda = htmlspecialchars($_POST['situacionVivienda']);
+    $situacionPermanente = htmlspecialchars($_POST['situacionPermanente']);
+    $bienesInmuebles = htmlspecialchars($_POST['bienesInmuebles']);
+    $otrosBienes = htmlspecialchars($_POST['otrosBienes']);
+    $tipoConstruccion = htmlspecialchars($_POST['tipoConstruccion']);
+    $tipoCasa = htmlspecialchars($_POST['tipoCasa']);
+    $aguaPotable = htmlspecialchars($_POST['aguaPotable']);
     
 
     try {
@@ -103,6 +110,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Parientes vivos: $parientesVivos<br>
             Hijos: $hijos<br>
             Esposo/Esposa/Pareja: $esposo<br>
+            Situación de vivienda actual: $situacionVivienda<br>
+            ¿Es esta situación permanente o transitoria?: $situacionPermanente<br>
+            Bienes inmuebles propios: $bienesInmuebles<br>
+            Otros bienes: $otrosBienes<br>
+            Tipo de construcción: $tipoConstruccion<br>
+            Tipo de casa: $tipoCasa<br>
+            Agua potable: $aguaPotable<br>
         ";
         if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] == UPLOAD_ERR_OK) {
             $fileTmpPath = $_FILES['archivo']['tmp_name'];

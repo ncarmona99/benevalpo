@@ -523,3 +523,26 @@ document
       event.target.value = "$";
     }
   });
+document
+  .getElementById("situacionVivienda")
+  .addEventListener("change", function (event) {
+    const viviendaPropiaFields = document.getElementById(
+      "viviendaPropiaFields"
+    );
+    if (event.target.value === "propia") {
+      viviendaPropiaFields.style.display = "block";
+    } else {
+      viviendaPropiaFields.style.display = "none";
+    }
+  });
+
+document
+  .getElementById("tipoConstruccion")
+  .addEventListener("change", function (event) {
+    const tipoCasaFields = document.getElementById("tipoCasaFields");
+    if (event.target.value === "casa") {
+      tipoCasaFields.style.display = "block";
+    } else {
+      tipoCasaFields.style.display = "none";
+    }
+  });
