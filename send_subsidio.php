@@ -60,6 +60,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tipoConstruccion = htmlspecialchars($_POST['tipoConstruccion']);
     $tipoCasa = htmlspecialchars($_POST['tipoCasa']);
     $aguaPotable = htmlspecialchars($_POST['aguaPotable']);
+    $serviciosHigienicos = htmlspecialchars($_POST['serviciosHigienicos']);
+    $numDorm = htmlspecialchars($_POST['numDorm']);
+    $numLiv = htmlspecialchars($_POST['numLiv']);
+    $numBano = htmlspecialchars($_POST['numBano']);
+    $numCoc = htmlspecialchars($_POST['numCoc']);
+    $construido = htmlspecialchars($_POST['construido']);
+    $terreno = htmlspecialchars($_POST['terreno']);
+    $sepultura = htmlspecialchars($_POST['sepultura']);
+
 
     $mail = new PHPMailer(true);
 
@@ -78,8 +87,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Encoding = 'base64';
 
         // Remitente y destinatario
-        $mail->setFrom('informatica@ecosa.cl', 'Solicitud de Subsidio');
-        $mail->addAddress('nicolascarmonarioseco@gmail.com');
+        $mail->setFrom('informatica@ecosa.cl', 'Solicitud de Subsidio BeneValpo web');
+        $mail->addAddress('informmatica@ecosa.cl');
 
         // Contenido del correo
         $mail->isHTML(true);
@@ -125,6 +134,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Tipo de construcción: $tipoConstruccion<br>
             Tipo de casa: $tipoCasa<br>
             Agua potable: $aguaPotable<br>
+            Servicios higiénicos: $serviciosHigienicos<br>
+            Número de dormitorios: $numDorm<br>
+            Cuántos Living: $numLiv<br>
+            Número de baños: $numBano<br>
+            Cuántas cocinas: $numCoc<br>
+            Metros Cuadrados construidos: $construido<br>
+            Metros Cuadrados Terreno: $terreno<br>
+            Sepultura: $sepultura<br>
         ";
 
         // Adjuntar archivo
